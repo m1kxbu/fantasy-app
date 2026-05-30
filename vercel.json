@@ -8,6 +8,10 @@
     {
       "path": "/api/cron/ingest-fp-bb",
       "schedule": "10 13 * * *"
+    },
+    {
+      "path": "/api/cron/mark-rookies",
+      "schedule": "20 13 * * *"
     }
   ]
 }

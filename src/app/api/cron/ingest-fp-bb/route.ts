@@ -4,17 +4,16 @@ import {
   fetchAndParseFp,
 } from "@/lib/sources/fantasypros";
 import { ingest } from "@/lib/ingest";
+import { checkCronAuth } from "@/lib/cron-auth";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
 export async function GET(request: Request) {
-  const url = new URL(request.url);
-  const provided = url.searchParams.get("secret");
-  const expected = process.env.CRON_SECRET;
-  if (!expected || provided !== expected) {
-    return NextResponse.json({ error: "unauthorized" }, { status: 401 });
+  const authErr = checkCronAuth(request);
+  if (authErr) {
+    return NextResponse.json({ error: authErr }, { status: 401 });
   }
 
   const userAgent =

@@ -1,9 +1,6 @@
-import { neon, neonConfig } from "@neondatabase/serverless";
+import { neon } from "@neondatabase/serverless";
 import { drizzle } from "drizzle-orm/neon-http";
 import * as schema from "./schema";
-
-// Cache connections across requests in dev to avoid hot-reload pool churn.
-neonConfig.fetchConnectionCache = true;
 
 function getConnectionString(): string {
   const url = process.env.DATABASE_URL;

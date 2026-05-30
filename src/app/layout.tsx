@@ -35,9 +35,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body
-        className={`${saira.variable} ${sairaCondensed.variable} ${jetbrainsMono.variable} bg-[#0a0d12] text-neutral-100 antialiased`}
+        className={`${saira.variable} ${sairaCondensed.variable} ${jetbrainsMono.variable}`}
       >
         {children}
       </body>

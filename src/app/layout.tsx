@@ -24,9 +24,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Gridiron Exchange",
+  title: "No Hubble — Fantasy ADP, traded like stock",
   description:
-    "Fantasy football ADP, traded like stock. Real movement from daily snapshots.",
+    "Fantasy football ADP visualized as a trading floor. Real movement from daily snapshots.",
 };
 
 export default function RootLayout({

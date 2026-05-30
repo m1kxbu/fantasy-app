@@ -192,7 +192,7 @@ export function Dashboard() {
           </div>
           <div>
             <h1>
-              GRIDIRON <em>EXCHANGE</em>
+              NO <em>HUBBLE</em>
             </h1>
             <p>fantasy ADP · traded like stock</p>
           </div>

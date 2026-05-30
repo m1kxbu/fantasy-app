@@ -18,7 +18,7 @@ export async function GET(request: Request) {
 
   const userAgent =
     process.env.SCRAPER_USER_AGENT ??
-    "GridironExchange/0.1 (+https://github.com/m1kxbu/fantasy-app)";
+    "NoHubble/0.1 (+https://nohubble.com)";
 
   try {
     const { raw, contentType, rows } = await fetchAndParseFp(

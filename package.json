@@ -13,7 +13,7 @@
     "lint": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "migrate": "node --import tsx src/db/migrate.ts"
+    "migrate": "node --env-file-if-exists=.env.local --import tsx src/db/migrate.ts"
   },
   "dependencies": {
     "next": "16.2.6",

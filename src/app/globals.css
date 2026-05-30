@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0a0d12;
+  --color-panel: #11151c;
+  --color-panel-border: #1c2230;
+  --color-text: #e8ebf0;
+  --color-text-dim: #9aa3b2;
+  --color-flat: #2a2f3a;
+  --color-green-mid: #1f7a44;
+  --color-green-hi: #11d676;
+  --color-red-mid: #7a2330;
+  --color-red-hi: #ff4d5e;
+  --color-up-text: #7df2b0;
+  --color-down-text: #ff9aa6;
+
+  --font-display: var(--font-saira-condensed);
+  --font-body: var(--font-saira);
+  --font-mono: var(--font-mono);
+}
+
+html,
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), system-ui, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-mono {
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+
+/* Subtle scrollbar styling for the dark terminal look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2632;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a3344;
+}
